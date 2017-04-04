@@ -8,3 +8,8 @@ import csv
 #path = '/Users/lordent/Desktop/X_Train'
 #Ray's image path
 #path = ''
+
+#Jaeho's facepath
+facepath = '/Users/lordent/Desktop/faces'
+#Ray's facepath
+#facepath - ''
