@@ -7,8 +7,11 @@ def csv_reader(file_obj):
     for row in reader:
         labels.append(row)
     return labels
+#Ray path
+#face_path = 'C:\\Users\\Raymond\\Desktop\\faces\\'
 
-face_path = 'C:\\Users\\Raymond\\Desktop\\faces\\'
+#Jaeho Path
+face_path = '/Users/lordent/Desktop/CompVisionCatDog/X_Train/X_Train/'
 
 path = 'Y_Train.csv'
 with open(path, "r") as file:
@@ -23,6 +26,8 @@ for i in range(0,len(labs)):
     
     if os.path.isfile(curr_path):
         if labs[i][1] == '1':
-            os.rename(curr_path, 'C:\\Users\\Raymond\\Desktop\\dogs\\'+labs[i][0])
+            os.rename(curr_path, '/Users/lordent/Desktop/CompVisionCatDog/dogs/' + labs[i][0])
+            #os.rename(curr_path, 'C:\\Users\\Raymond\\Desktop\\dogs\\'+labs[i][0])
         else: 
-            os.rename(curr_path, 'C:\\Users\\Raymond\\Desktop\\cats\\'+labs[i][0])
+            os.rename(curr_path, '/Users/lordent/Desktop/CompVisionCatDog/cats/' + labs[i][0])
+            #os.rename(curr_path, 'C:\\Users\\Raymond\\Desktop\\cats\\'+labs[i][0])
