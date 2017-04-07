@@ -6,7 +6,7 @@ ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True,
 	help="path to the input image")
 ap.add_argument("-c", "--cascade",
-	default="cascade_LBP.xml",
+	default="Classifier_All/cascade_all.xml",
 	help="path to face detector haar cascade")
 args = vars(ap.parse_args())
 
@@ -19,6 +19,8 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 detector = cv2.CascadeClassifier(args["cascade"])
 rects = detector.detectMultiScale(gray, scaleFactor=1.3,
 	minNeighbors=10, minSize=(75, 75))
+
+print(rects)
 
 # loop over the faces and draw a rectangle surrounding each
 for (i, (x, y, w, h)) in enumerate(rects):
