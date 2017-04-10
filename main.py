@@ -6,12 +6,15 @@ ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True,
 	help="path to the input image")
 ap.add_argument("-c", "--cascade",
-	default="Classifier_All/cascade_all.xml",
+	default="Classifier_All/allcatdogbody.xml",
 	help="path to face detector haar cascade")
 args = vars(ap.parse_args())
 
 # load the input image and convert it to grayscale
 image = cv2.imread(args["image"])
+
+image = cv2.resize(image, (300, image.shape[0]*300//image.shape[1]))
+
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # load the face detector Haar cascade, then detect faces
