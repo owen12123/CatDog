@@ -21,13 +21,28 @@ detector = cv2.CascadeClassifier(args["cascade"])
 rects = detector.detectMultiScale(gray, scaleFactor=1.3,
 	minNeighbors=10, minSize=(75, 75))
 
-print(rects)
+print(rects[0])
+
+X = []
+Y = []
+XW = []
+YH = []
 
 # loop over the faces and draw a rectangle surrounding each
 for (i, (x, y, w, h)) in enumerate(rects):
-	cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-	cv2.putText(image, "{}".format(i + 1), (x, y - 10),
-		cv2.FONT_HERSHEY_SIMPLEX, 0.55, (0, 0, 255), 2)
+	X.append(x)
+	Y.append(y)
+	XW.append(x+w)
+	YH.append(y+h)
+
+xMin = min(X)
+yMin = min(Y)
+xwMax = max(XW)
+yhMax = max(YH)
+
+cv2.rectangle(image, (xMin, yMin), (xwMax, yhMax), (0, 0, 255), 2)
+#cv2.putText(image, "{}".format(i + 1), (x, y - 10),
+	#cv2.FONT_HERSHEY_SIMPLEX, 0.55, (0, 0, 255), 2)
 
 # show the detected faces
 cv2.imshow("Animal Faces", image)
