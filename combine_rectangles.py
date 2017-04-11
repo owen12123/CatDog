@@ -1,5 +1,7 @@
 import argparse
 import cv2
+import numpy as np
+from skimage.feature import local_binary_pattern
  
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
@@ -28,22 +30,32 @@ Y = []
 XW = []
 YH = []
 
-# loop over the faces and draw a rectangle surrounding each
+# loop over the reactnalges and record edge positions
 for (i, (x, y, w, h)) in enumerate(rects):
 	X.append(x)
 	Y.append(y)
 	XW.append(x+w)
 	YH.append(y+h)
 
+# get minimum and maximum rectangle coordinates
 xMin = min(X)
 yMin = min(Y)
 xwMax = max(XW)
 yhMax = max(YH)
 
+# draw combined rectangle
 cv2.rectangle(image, (xMin, yMin), (xwMax, yhMax), (0, 0, 255), 2)
-#cv2.putText(image, "{}".format(i + 1), (x, y - 10),
-	#cv2.FONT_HERSHEY_SIMPLEX, 0.55, (0, 0, 255), 2)
+
+# get portion of image within large rectangle
+cropped_img = gray[yMin:yhMax,xMin:xwMax]
+
+# compute local binary pattern of cropped image and its normalized histogram
+lbp = local_binary_pattern(cropped_img, 8, 1, "default")
+hist, _ = np.histogram(lbp, 256, density=True)
+
+print(hist)
 
 # show the detected faces
 cv2.imshow("Animal Faces", image)
+cv2.imshow("Cropped", cropped_img)
 cv2.waitKey(0)
