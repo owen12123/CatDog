@@ -21,8 +21,6 @@ detector = cv2.CascadeClassifier(args["cascade"])
 rects = detector.detectMultiScale(gray, scaleFactor=1.3,
 	minNeighbors=10, minSize=(75, 75))
 
-print(rects)
-
 # loop over the faces and draw a rectangle surrounding each
 for (i, (x, y, w, h)) in enumerate(rects):
 	cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
@@ -32,3 +30,4 @@ for (i, (x, y, w, h)) in enumerate(rects):
 # show the detected faces
 cv2.imshow("Animal Faces", image)
 cv2.waitKey(0)
+cv2.imwrite('photo.jpg', image)
