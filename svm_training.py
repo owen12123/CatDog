@@ -32,6 +32,7 @@ del csv[0]
 xData = np.zeros((len(csv),256), dtype=np.float64)
 
 xPath = 'C:/Users/Raymond/Documents/opencv Shit/X_Train/'
+#xPath = ''
 
 yData = np.asarray(csv)
 yData = np.delete(yData,0,1)
