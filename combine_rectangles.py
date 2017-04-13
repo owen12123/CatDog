@@ -14,7 +14,7 @@ args = vars(ap.parse_args())
 
 # load the input image and convert it to grayscale
 image = cv2.imread(args["image"])
-image = cv2.resize(image, (300, image.shape[0]*300//image.shape[1]))
+#image = cv2.resize(image, (300, image.shape[0]*300//image.shape[1]))
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # load the face detector Haar cascade, then detect faces
@@ -38,10 +38,14 @@ for (i, (x, y, w, h)) in enumerate(rects):
 	YH.append(y+h)
 
 # get minimum and maximum rectangle coordinates
-xMin = min(X)
-yMin = min(Y)
-xwMax = max(XW)
-yhMax = max(YH)
+if len(X) != 0:
+	xMin = min(X)
+	yMin = min(Y)
+	xwMax = max(XW)
+	yhMax = max(YH)
+else:
+	height,width = gray.shape
+	xMin,yMin,xwMax,yhMax = 0,0,width,height
 
 # draw combined rectangle
 cv2.rectangle(image, (xMin, yMin), (xwMax, yhMax), (0, 0, 255), 2)
@@ -53,7 +57,7 @@ cropped_img = gray[yMin:yhMax,xMin:xwMax]
 lbp = local_binary_pattern(cropped_img, 8, 1, "default")
 hist, _ = np.histogram(lbp, 256, density=True)
 
-print(hist)
+#print(hist)
 
 # show the detected faces
 cv2.imshow("Animal Faces", image)
