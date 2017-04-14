@@ -24,9 +24,9 @@ csv_out.append("Image,Label".split(","))
 for root, dirs, files in os.walk(dataPath):
     filenames = files 
 
-#print(filenames[0][4:-4])
+print(filenames[1379][4:-4])
 
-
+'''
 for i in range(0,len(filenames)):
     if filenames[i][:3] == 'dog':
     	clas = '1'
@@ -35,3 +35,4 @@ for i in range(0,len(filenames)):
     csv_out.append((filenames[i]+","+clas).split(","))
 
 csv_writer(csv_out,outputpath)
+'''

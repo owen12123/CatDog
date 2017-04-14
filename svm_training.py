@@ -24,7 +24,7 @@ ap.add_argument("-c", "--cascade",
 	help="path to face detector haar cascade")
 args = vars(ap.parse_args())
 
-yPath = 'Y_Train.csv'
+yPath = 'hugeTrain2.csv'
 with open(yPath, "r") as file:
     csv = csv_reader(file)
 del csv[0]
@@ -87,7 +87,7 @@ for i in range(0,len(filenames)):
 
 	#zero = not hist.any()
 	#if(zero):
-	#	print(curr_path)
+	#print(filenames[i])
 	if filenames[i][:3] == 'dog':
 		img_index = int(filenames[i][4:-4])+12500
 	else:
