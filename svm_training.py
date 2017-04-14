@@ -29,6 +29,7 @@ with open(yPath, "r") as file:
     csv = csv_reader(file)
 del csv[0]
 
+<<<<<<< HEAD
 filenames = []
 for root, dirs, files in os.walk('C:/Users/Raymond/Desktop/trainSet'):
     filenames = files 
@@ -87,6 +88,32 @@ for i in range(0,len(filenames)):
 
 	zero = not hist.any()
 	if(zero):
+=======
+xData = np.zeros((len(csv),256), dtype=np.float64)
+
+xPath = 'C:/Users/Raymond/Documents/opencv Shit/X_Train/'
+#xPath = ''
+
+yData = np.asarray(csv)
+yData = np.delete(yData,0,1)
+yData = yData.flatten()
+
+for i in range(0,len(csv)):
+	curr_path = xPath + csv[i][0]
+	if os.path.isfile(curr_path):
+
+		# load the input image and convert it to grayscale
+		image = cv2.imread(curr_path)
+		image = cv2.resize(image, (500, image.shape[0]*500//image.shape[1]))
+		gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+		
+		# load the face detector Haar cascade, then detect faces
+		# in the input image
+		detector = cv2.CascadeClassifier(args["cascade"])
+		rects = detector.detectMultiScale(gray, scaleFactor=1.3,
+			minNeighbors=10, minSize=(75, 75))
+		
+>>>>>>> origin/master
 		print(curr_path)
 
 	img_index = int(filenames[i][:-4])
