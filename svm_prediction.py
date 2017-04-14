@@ -25,7 +25,7 @@ ap.add_argument("-c", "--cascade",
 	help="path to face detector haar cascade")
 args = vars(ap.parse_args())
 
-clf = joblib.load('equalcatdog.pkl')
+clf = joblib.load('equalcatdog_noResize.pkl')
 
 outputpath = 'C:/Users/Raymond/Desktop/output.csv'
 

@@ -29,15 +29,14 @@ with open(yPath, "r") as file:
     csv = csv_reader(file)
 del csv[0]
 
-<<<<<<< HEAD
 filenames = []
-for root, dirs, files in os.walk('C:/Users/Raymond/Desktop/trainSet'):
+for root, dirs, files in os.walk('C:/Users/Raymond/Downloads/train'):
     filenames = files 
 
 xData = np.zeros((len(filenames),256), dtype=np.float64)
 #yData = np.zeros((len(filenames)), dtype=object)
 yData = []
-xPath = 'C:/Users/Raymond/Desktop/trainSet/'
+xPath = 'C:/Users/Raymond/Downloads/train/'
 
 #yData = np.asarray(csv)
 #yData = np.delete(yData,0,1)
@@ -89,8 +88,10 @@ for i in range(0,len(filenames)):
 	#zero = not hist.any()
 	#if(zero):
 	#	print(curr_path)
-
-	img_index = int(filenames[i][:-4])
+	if filenames[i][:3] == 'dog':
+		img_index = int(filenames[i][4:-4])+12500
+	else:
+		img_index = int(filenames[i][4:-4])
 	yData.append(csv[img_index][1])
 
 # Remove zero-rows from xData array     
@@ -103,4 +104,4 @@ clf = svm.LinearSVC()
 
 clf.fit(xData,yData)
 
-joblib.dump(clf, 'equalcatdog_noResize.pkl')
+joblib.dump(clf, '25000catdog_linear.pkl')
