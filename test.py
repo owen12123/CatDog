@@ -20,10 +20,10 @@ with open(path, "r") as file:
 
 del labs[0]
 
-labs = np.asarray(labs)
-labs = np.delete(labs,0,1)
+#labs = np.asarray(labs)
+#labs = np.delete(labs,0,1)
 
-
+print(labs[0])
 
 
 '''

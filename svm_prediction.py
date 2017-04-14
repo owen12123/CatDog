@@ -5,6 +5,16 @@ import os
 import argparse
 from sklearn import svm
 from sklearn.externals import joblib
+import csv
+
+def csv_writer(data, path):
+    """
+    Write data to a CSV file path
+    """
+    with open(path, "w", newline='') as csv_file:
+        writer = csv.writer(csv_file, delimiter=',')
+        for line in data:
+            writer.writerow(line)
 
 ap = argparse.ArgumentParser()
 #ap.add_argument("-i", "--image", required=True,
@@ -15,20 +25,30 @@ ap.add_argument("-c", "--cascade",
 	help="path to face detector haar cascade")
 args = vars(ap.parse_args())
 
-clf = joblib.load('modeldata.pkl')
+clf = joblib.load('equalcatdog.pkl')
+
+outputpath = 'C:/Users/Raymond/Desktop/output.csv'
 
 # Generate list of all file paths + file names
+#filenames = []
+#for path, subdirs, files in os.walk('testphotos'):
+#    for name in files:
+#        filenames.append(os.path.join(path, name))
+
 filenames = []
-for path, subdirs, files in os.walk('testphotos'):
-    for name in files:
-        filenames.append(os.path.join(path, name))
+for root, dirs, files in os.walk('C:/Users/Raymond/Desktop/X_Test'):
+    filenames = files 
+testpath = 'C:/Users/Raymond/Desktop/X_Test/'
 
 xSamples = np.zeros((len(filenames),256), dtype=np.float64)
 
+outputlist = []
+outputlist.append("Image,Label".split(","))
+
 for i in range(0,len(filenames)):
 # load the input image and convert it to grayscale
-	image = cv2.imread(filenames[i])
-	image = cv2.resize(image, (500, image.shape[0]*500//image.shape[1]))
+	image = cv2.imread(testpath + filenames[i])
+	#image = cv2.resize(image, (500, image.shape[0]*500//image.shape[1]))
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)	
 
 	# load the face detector Haar cascade, then detect faces
@@ -69,7 +89,8 @@ for i in range(0,len(filenames)):
 predictions = clf.predict(xSamples)
 
 for i in range(0,len(filenames)):
-	print(filenames[i])
-	print(predictions[i])
+	outputlist.append((filenames[i]+","+predictions[i]).split(","))
+
+csv_writer(outputlist,outputpath)
 
 
