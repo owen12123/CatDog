@@ -24,19 +24,22 @@ ap.add_argument("-c", "--cascade",
 	help="path to face detector haar cascade")
 args = vars(ap.parse_args())
 
-yPath = 'hugeTrain2.csv'
+yPath = 'Y_Train.csv'
 with open(yPath, "r") as file:
     csv = csv_reader(file)
 del csv[0]
 
+#samplePath = 'C:/Users/Raymond/Downloads/train'
+samplePath = 'C:/Users/Raymond/Desktop/trainSet'
+
 filenames = []
-for root, dirs, files in os.walk('C:/Users/Raymond/Downloads/train'):
+for root, dirs, files in os.walk(samplePath):
     filenames = files 
 
 xData = np.zeros((len(filenames),256), dtype=np.float64)
 #yData = np.zeros((len(filenames)), dtype=object)
 yData = []
-xPath = 'C:/Users/Raymond/Downloads/train/'
+xPath = samplePath + '/'
 
 #yData = np.asarray(csv)
 #yData = np.delete(yData,0,1)
@@ -81,17 +84,23 @@ for i in range(0,len(filenames)):
 	# get portion of image within large rectangle
 	cropped_img = gray[yMin:yhMax,xMin:xwMax]		
 	# compute local binary pattern of cropped image and its normalized histogram
-	lbp = local_binary_pattern(cropped_img, 8, 1, "default")
+	lbp = local_binary_pattern(cropped_img, 16, 2, "ror")
 	hist, _ = np.histogram(lbp, 256, density=True)
 	xData[i] = hist
 
 	#zero = not hist.any()
 	#if(zero):
 	#print(filenames[i])
+
+	'''
 	if filenames[i][:3] == 'dog':
 		img_index = int(filenames[i][4:-4])+12500
 	else:
 		img_index = int(filenames[i][4:-4])
+	'''
+
+	img_index = int(filenames[i][:-4])
+
 	yData.append(csv[img_index][1])
 
 # Remove zero-rows from xData array     
@@ -104,4 +113,4 @@ clf = svm.LinearSVC()
 
 clf.fit(xData,yData)
 
-joblib.dump(clf, '25000catdog_linear.pkl')
+joblib.dump(clf, '3806catdog_linear_ror_radius2.pkl')

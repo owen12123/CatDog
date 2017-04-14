@@ -25,9 +25,9 @@ ap.add_argument("-c", "--cascade",
 	help="path to face detector haar cascade")
 args = vars(ap.parse_args())
 
-clf = joblib.load('C:/Users/Raymond/Documents/CatDog/Training_Models/25000catdog_linear.pkl')
+clf = joblib.load('Training_Models/3806catdog_linear_ror_radius2.pkl')
 
-outputpath = '25000output_linear.csv'
+outputpath = '3806output_linear_ror_radius2.csv'
 
 # Generate list of all file paths + file names
 #filenames = []
