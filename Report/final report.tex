@@ -28,10 +28,10 @@
 	\vspace{1cm}
 	{\scshape\Large ECSE 415 Project\par}
 	\vspace{1.5cm}
-	{\huge\bfseries Cat and dog\par}
+	{\huge\bfseries Cat and Dog\par}
 	\vspace{2cm}
 	{\Large Jaeho Lee\par}
-	{ 260633759\par} {\Large Raymond So \par} {260640297 \par}
+	{ 260633759\par} {\Large Raymond So \par} {260640297 \par}{Team name: You thought it was an original team name, \\but it was me, DIO!}
 	\vfill
 	submitting to\par
 	Prof.~James \textsc{Clark}
@@ -55,17 +55,13 @@
 
 \maketitle
 
-% As a general rule, do not put math, special symbols or citations
-% in the abstract
-\begin{abstract}
-A two stage CMOS amplifier circuit is designed in this project. The amplifier consumes \(67.0\mu W\) when operating. The design of amplifier were modified compare to design from previous phase. The voltage and current outputs were closed to prediction. However the gain had \(\approx 1.8 dB\) difference which is \(23.0 \%\). Which is reasonable consider numerous approximations and assumptions were made for the calculation.
-\end{abstract}
+
 
 \IEEEpeerreviewmaketitle
 
 \section{Introduction}
 % no \IEEEPARstart
-In this project, a two stage CMOS amplifier circuit is designed to be able to used in a unity gain closed loop configuration to act as a buffer between a tire sensor and an ADC in microcontroller in an automobile. The amplifier is operated in specific voltage depends on students' ID number. The amplifier is consisted of two current mirrors, a differential amplifier and a cascade circuit. In this project, by closing loop, unity gain circuit is tested and designed based on settling time, steady-state error. The report contains how the open-loop amplifier gain and bandwidth is related to the closed-loop step response parameter, how this design is related to the frequency compensation process, whether previously designed open loop amplifier's parameters-from phase 1 report-were used for the project and comparison between the numerical calculation and SPICE simulation result.
+Most research for object classification was more focused on classifying images that are completely different (ex. horse and ship). In this project, we classify whether the image contains a picture of dog or cat. We were given 5906 images from [Cat and Dog paper]. We trained animal body detection and classification using 1500 images of cat and dog each. We used Haar features to detect the portion of the image containing the animal. Computation of the LBP histogram provides feature of the image for the classification. And then, we used  SVM to define whether the image contains dogs or cats.
 
 \subsection{Amplifier requirements}
 The student id of the student is 260633759. The supply voltage level can be calculated based on the equation:\\
@@ -98,6 +94,11 @@ From the project description and after all calculation were made, a table for re
 	\end{tabular}
 	\caption{Amplifier Requirements}\label{table: 1}
 \end{table}
+
+\section{Problem Representation}
+
+
+
 \section{Discussion}
 \subsection{Circuit description}
 The CMOS two-stage amplifier consists of two current

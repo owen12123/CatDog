@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 APR 2017 19:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  14 APR 2017 16:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -351,21 +351,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7.0262> on input line 56.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5.01874> on input line 56.
-LaTeX Font Info:    Calculating math sizes for size <9.03374> on input line 61.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9.03374> on input line 61.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6.32358> on input line 61.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.51686> on input line 61.
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--76
+Underfull \hbox (badness 10000) in paragraph at lines 70--72
 
  []
 
@@ -373,12 +365,22 @@ Missing character: There is no â in font cmr7!
 Missing character: There is no € in font cmr7!
 Missing character: There is no ¢ in font cmr7!
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--80
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+
+ []
+
+
+Underfull \hbox (badness 3460) in paragraph at lines 119--149
+\OT1/ptm/m/n/10.03749 A Mi-crosoft Ex-cel spread-sheet was cre-ated for the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--149
 
  []
 
@@ -386,61 +388,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
 
 ]
-Underfull \hbox (badness 3460) in paragraph at lines 118--148
-\OT1/ptm/m/n/10.03749 A Mi-crosoft Ex-cel spread-sheet was cre-ated for the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--148
+Underfull \hbox (badness 10000) in paragraph at lines 150--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--151
-
- []
-
-
-Underfull \hbox (badness 2653) in paragraph at lines 149--151
+Underfull \hbox (badness 2653) in paragraph at lines 150--152
 \OT1/ptm/m/n/10.03749 -4.8900$\OML/cmm/m/it/10 ^^V$\OT1/ptm/m/n/10.03749 A. The
 re-fore the power con-sump-tion of the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
 
-Underfull \hbox (badness 5008) in paragraph at lines 173--175
+Underfull \hbox (badness 5008) in paragraph at lines 174--176
 \OT1/ptm/m/n/10.03749 with dif-fer-ent val-ues. How-ever since the dif-fer-ence
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--175
+Underfull \hbox (badness 10000) in paragraph at lines 174--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--196
+Underfull \hbox (badness 10000) in paragraph at lines 180--197
 
  []
 
-[2] [3
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 209--210
 
  []
 
@@ -455,17 +445,17 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4
+[3
 
 ] (./final report.aux) ) 
 Here is how much of TeX's memory you used:
- 4940 strings out of 493089
- 76682 string characters out of 6134842
+ 4919 strings out of 493089
+ 76368 string characters out of 6134842
  155663 words of memory out of 5000000
- 8363 multiletter control sequences out of 15000+600000
- 53822 words of font info for 94 fonts, out of 8000000 for 9000
+ 8347 multiletter control sequences out of 15000+600000
+ 50707 words of font info for 89 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 38i,12n,39p,904b,832s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,12n,39p,796b,832s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/bas
 e/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cme
 x10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
@@ -473,24 +463,20 @@ x10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
 .pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.p
 fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
-ype1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/t
-imes/utmri8a.pfb>
-Output written on "final report.pdf" (5 pages, 285150 bytes).
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/f
+onts/type1/urw/times/utmri8a.pfb>
+Output written on "final report.pdf" (4 pages, 251786 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
