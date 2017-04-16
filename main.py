@@ -6,7 +6,7 @@ ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True,
 	help="path to the input image")
 ap.add_argument("-c", "--cascade",
-	default="Classifiers/cascade.xml",
+	default="Classifiers/4kdogcascade.xml",
 	help="path to face detector haar cascade")
 args = vars(ap.parse_args())
 
@@ -30,4 +30,4 @@ for (i, (x, y, w, h)) in enumerate(rects):
 # show the detected faces
 cv2.imshow("Animal Faces", image)
 cv2.waitKey(0)
-cv2.imwrite('photo.jpg', image)
+#cv2.imwrite('photo.jpg', image)
