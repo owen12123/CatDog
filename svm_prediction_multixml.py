@@ -28,13 +28,15 @@ args = vars(ap.parse_args())
 
 xml1 = 'Classifiers/4kdogcascade.xml'
 xml2 = 'Classifier_cat_4k/cascade.xml'
+xml3 = 'Classifier_cat_ears/cascade.xml'
 
 detector1 = cv2.CascadeClassifier(xml1)
 detector2 = cv2.CascadeClassifier(xml2)
+detector3 = cv2.CascadeClassifier(xml3)
 
-clf = joblib.load('Training_Models/RBF.pkl')
+clf = joblib.load('Training_Models/withEars.pkl')
 
-outputpath = 'RBF.csv'
+outputpath = 'withEars.csv'
 
 filenames = []
 for root, dirs, files in os.walk('C:/Users/Raymond/Desktop/X_Test'):
@@ -56,6 +58,7 @@ for i in range(0,len(filenames)):
 	# in the input image
 	rects1 = detector1.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=10, minSize=(25, 25))
 	rects2 = detector2.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=10, minSize=(25, 25))			
+	rects3 = detector3.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=10, minSize=(25, 25))	
 
 	rects = []
 	if len(rects1)>0 and len(rects2)==0:
@@ -68,6 +71,9 @@ for i in range(0,len(filenames)):
 		rects.append(rects1[0])
 		rects.append(rects2[0])
 
+	if len(rects3) > 0:
+		for i in range(0,len(rects3)):
+			rects.append(rects3[i])
 	X = []
 	Y = []
 	XW = []

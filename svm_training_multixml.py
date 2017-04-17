@@ -1,5 +1,4 @@
 import csv
-import argparse
 import cv2
 import numpy as np
 from skimage.feature import local_binary_pattern
@@ -7,6 +6,7 @@ import os
 from sklearn import svm
 from sklearn.externals import joblib
 
+# function for reading csv files to assign labels to training imges
 def csv_reader(file_obj):
     labels = []
     reader = csv.reader(file_obj)
@@ -14,56 +14,50 @@ def csv_reader(file_obj):
         labels.append(row)
     return labels
 
-# construct the argument parse and parse the arguments
-#ap = argparse.ArgumentParser()
-#ap.add_argument("-i", "--image", required=True,
-#	help="path to the input image")
-
-#ap.add_argument("-c", "--cascade",
-#	default="Classifier_All/allcatdogbody.xml",
-#	help="path to face detector haar cascade")
-#args = vars(ap.parse_args())
-
+# load haar-feature based classifiers
 xml1 = 'Classifiers/4kdogcascade.xml'
 xml2 = 'Classifier_cat_4k/cascade.xml'
 
+# create cascade classifier objects
 detector1 = cv2.CascadeClassifier(xml1)
 detector2 = cv2.CascadeClassifier(xml2)
 
+# set path for image label csv file
 yPath = 'Y_Train.csv'
-#yPath = 'hugeTrain2.csv'
+
+# load image names and labels into array
 with open(yPath, "r") as file:
     csv = csv_reader(file)
+
+# remove header line from csv file
 del csv[0]
 
-#samplePath = 'C:/Users/Raymond/Downloads/train'
+# set path for training image folder
 samplePath = 'C:/Users/Raymond/Desktop/trainSet'
+xPath = samplePath + '/'
 
+# generate list of images in training image folder
 filenames = []
 for root, dirs, files in os.walk(samplePath):
     filenames = files 
 
+# initialize array for storing LBP histogram of each image
 xData = np.zeros((len(filenames),256), dtype=np.float64)
-#yData = np.zeros((len(filenames)), dtype=object)
+
+# initialize list for storing image labels
 yData = []
-xPath = samplePath + '/'
 
-#yData = np.asarray(csv)
-#yData = np.delete(yData,0,1)
-#yData = yData.flatten()
-
-#zero_rows = 0
-
+# loop through all images in training folder
 for i in range(0,len(filenames)):
 	curr_path = xPath + filenames[i]
 
-	# load the input image and convert it to grayscale
+	# load input image, resize it, convert it to grayscale, and pass a 5x5 gaussian flter over it
 	image = cv2.imread(curr_path)
 	image = cv2.resize(image, (150, image.shape[0]*150//image.shape[1]))
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 	gray = cv2.blur(gray,(5,5))
-	# load the face detector Haar cascade, then detect faces
-	# in the input image
+
+	# load detectors and store coordinates of detected regions
 	rects1 = detector1.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=10, minSize=(25, 25))
 	rects2 = detector2.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=10, minSize=(25, 25))	
 
@@ -78,57 +72,48 @@ for i in range(0,len(filenames)):
 		rects.append(rects1[0])
 		rects.append(rects2[0])
 
-	#print(curr_path)		
+	# initialize lists of rectangle edge positions		
 	X = []
 	Y = []
 	XW = []
 	YH = []		
-	# loop over the reactnalges and record edge positions
+
+	# loop over the rectangles and record edge positions
 	for (i, (x, y, w, h)) in enumerate(rects):
 		X.append(x)
 		Y.append(y)
 		XW.append(x+w)
-		YH.append(y+h)		
+		YH.append(y+h)
+
 	# get minimum and maximum rectangle coordinates
 	if len(X) != 0:
 		xMin = min(X)
 		yMin = min(Y)
 		xwMax = max(XW)
 		yhMax = max(YH)
+	# if no region of image was detected, use the whole image
 	else:
 		height,width = gray.shape
 		xMin,yMin,xwMax,yhMax = 0,0,width,height		
-	# draw combined rectangle
-	#cv2.rectangle(image, (xMin, yMin), (xwMax, yhMax), (0, 0, 255), 2)		
-	# get portion of image within large rectangle
-	cropped_img = gray[yMin:yhMax,xMin:xwMax]		
-	# compute local binary pattern of cropped image and its normalized histogram
+	
+	# make one large rectangle by using extreme coordinates of smaller rectangles
+	# and use that region to compute LBP and the LBP's normalize 
+	cropped_img = gray[yMin:yhMax,xMin:xwMax]	
 	lbp = local_binary_pattern(cropped_img, 8, 1, "default")
 	hist, _ = np.histogram(lbp, 256, density=True)
+
+	# save histogram into xData array
 	xData[i] = hist
 
-	#zero = not hist.any()
-	#if(zero):
-	#print(filenames[i])
-	'''
-	if filenames[i][:3] == 'dog':
-		img_index = int(filenames[i][4:-4])+12500
-	else:
-		img_index = int(filenames[i][4:-4])
-	'''
-
+	# obtain image label using the current image's name
 	img_index = int(filenames[i][:-4])
-
 	yData.append(csv[img_index][1])
 
-# Remove zero-rows from xData array     
-#xData = xData[~np.all(xData == 0, axis=1)] 
+# create linear SVM object 
+clf = svm.LinearSVC()
 
-clf = svm.SVC()
-
-#print(xData)
-#print(yData)
-
+# fit data 
 clf.fit(xData,yData)
 
-joblib.dump(clf, 'RBF.pkl')
+# save training model in .pkl format
+joblib.dump(clf, 'training_model.pkl')
