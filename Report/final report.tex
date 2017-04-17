@@ -91,10 +91,10 @@ LSVM from sklearn library [sklearn library] was used to give linear line to sepa
 \end{figure*}
 \begin{figure*}
 	\begin{multicols}{4}
-    		\includegraphics[height=1.2\linewidth]{goodFace2.jpg}\par 
-    		\includegraphics[height=1.2\linewidth]{dogeFace.jpg}\par 
-    		\includegraphics[height=1.2\linewidth]{badFace.jpg}\par
-    		\includegraphics[height=1.2\linewidth]{badFace2.jpg}\par
+    		\includegraphics[height=1.3\linewidth]{goodFace2.jpg}\par 
+    		\includegraphics[height=1.3\linewidth]{dogeFace.jpg}\par 
+    		\includegraphics[height=1.3\linewidth]{smolrect.jpg}\par
+    		\includegraphics[height=1.3\linewidth]{smolrect2.jpg}\par
 	\end{multicols}
 	\caption{Face detection result (left : succeed, right : failed)}
 \end{figure*}
@@ -103,107 +103,11 @@ LSVM from sklearn library [sklearn library] was used to give linear line to sepa
 \section{Testing}
 The project is separated into two different section, object detection and classification. Both sections tested separately before merged. This section describes how they were tested and the result of the project.
 \subsection{Object Detection}
-For both face and body detection, we trained the xml file with different number of stages, different distribution of face type, and different section of faces. With 4000 face images, cat detector performed best with 14~16 stages. Above 16 stages, the detector could not detect face
+For both face and body detection, we trained the xml file with different number of stages, different distribution of face type, and different section of faces. With 4000 face images, cat detector performed best with 14~16 stages. Above 16 stages, the detector could not detect anything frequently. Below 14 stages, the detector includes wrong features and add unnecessary part which fails the purpose of face detection. Even with the optimized stages, we still could see detector detects wrong features and adds unnecessary parts which is addressed in Figure 2. 
 \subsection{Classification}
 \subsection{Kaggle Result}
 \section{Discussion}
 
-
-\subsection{Circuit description}
-The CMOS two-stage amplifier consists of two current
-mirrors, a differential amplifier and a cascade circuit. The circuit diagram is drawn in figure 1. For ease of calculation, the circuit is designed to have 1V \(V_{ov}\) for all MOSFETs.  A value of \(50 k\Omega\) was chosen for reference resistor, \(R\_ref\) and \(0.1 pF\) was chosen for compensation capacitor, \(C\_c\). Using Equation (1) , this design is calculated to generate an open-loop gain, \(A_o\), of 1254 which satisfies the requirements. Using the circuit, simulated result clearly does not satisfies the design requirement. The output voltage, \(V\_o\), has a massive continuous pulse which does not satisfy the design requirement which addresses that both \(R\_ref\) and \(C\_c\) values have to be changed. This is depicted in figure 2.
-
-In industry, normally \(100\Omega\) to \(50M\Omega\) resistors and \(0.1pF\) to \(10\mu F\) capacitors are used for circuit design. Consider these values are design restriction, \(15M\Omega\) resistor \(25pF\) capacitor are chosen for \(R\_ref\) and \(C\_c\). Since very high resistance value was chosen for reference resistor, it is obvious that current goes through second layer amplifier, cascade amplifier, would be low. In order to fix this issue, 2 PMOSs and 2 NMOSs are added for cascade amplifier to triple MOSFET width. Figure 3 presents the circuit diagram. A detail figure is provided in appendices\\
-
-
-\subsection{Open-Loop Analysis}
-
-To simplify calculations, the amplifier is designed to give identical \(V_{ov}\) for all MOSFETs. Equation (1) was used to calculate \(A_o\).
-\begin{equation}
-A_o = \frac{2*V_{an} * V_{ap}}{V_{ov}*(V_{an}+V_{ap})}^2
-\end{equation}\\
-The gain in decibel is simply calculated by:
-\[
-A_{dB} = 20 \log_{10}(A_o)
-\]
-A Microsoft Excel spreadsheet was created for the calculation. The comparison between calculated values and SPICE simulated values are as follows:\\
-\begin{table}[!htb]
-	\begin{center}
-	\begin{tabular}{|c|c|c|}
-	\hline
-	&Calculation & Simulation\\
-	\hline	
-	\(V_{d1}\) & -4.782 V&-4.782 V\\
-	\(V_{d2}\) & -2.068 V&-2.063 V\\
-	\(V_{d3}\) & 5.282&5.286\\
-	\(i_1\)&773.21\(n\)A&775.49\(n\)A\\
-	\(i_2\)&1.546\(\mu\)A&1.551\(\mu\)A\\
-	\(i_4\)&776.70\(n\)A&775.49\(n\)A\\
-	\(i_5\)&769.70\(n\)A&796.11\(n\)A\\
-	\(i_6\)&776.70\(n\)A&796.11\(n\)A\\
-	\(i_8\)&776.70\(n\)A&840.66\(n\)A\\
-	\(V_{ov}\)&68.3\(mV\)&69.15\(mV\)\\
-	\(A_{dB}\)&110.70 dB &112.54 dB\\
-	\hline
-	\end{tabular}
-	\end{center}
-	\caption{Calculation \& Simulation Comparison}\label{table2 :}
-\end{table}\\
-The graph with gain in decibel and phase margin at 0dB is provided in figure 4.\\
-%\begin{figure}[!htb]
-%\centering
-%\includegraphics[width=\columnwidth]{2openloop}
-%\caption{Open-loop Gain}
-%\end{figure}\\
-
-The graph addresses that based on equation (4), the phase margin is positive which states the circuit is stable. The table above indicates that the predicted voltage values and current values made by the student are fairly close to SPICE simulation values. The calculated gain based on the equation (1) is 110.49 dB where the simulated gain is 112.54 dB.\\
-\\The entire amplifier is running in \(2 * 6.85V = 13.7V\). The current goes through voltage source, \(V_{dd}\&V_{ss}\) is -4.8900\(\mu\)A. Therefore the power consumption of the amplifier is 13.7V *-4.8900\(\mu\)A =67.0\(\mu\)W
-
-\subsection{Closed-Loop Analysis}
-In order to start closed loop analysis, few equations must be discussed. Poles are critical components in order to stabilize the circuit. 4 poles are observed in this amplifier design where two poles are on the same spot. Open-loop simulation result is provided in figure 4, Closed-loop is provided in figure  (5). Poles define bandwidth of the circuit. Required closed-loop bandwidth for the project is \(\tau \geq 7.96kHz\). Where \(\tau\) can be represented as follow equation (2) and the bandwidth is addressed on equation (3). Phase margin calculation is on equation (4).
-\begin{equation}
-\tau = \sum_{n=1}^{N} C_nR_n
-\end{equation}\\
-\begin{equation}
-\omega = \frac{1}{2\pi\tau}
-\end{equation}\\
-\begin{equation}
-PM = f_{0} + 180^{\circ}
-\end{equation}\\
-
-In both Closed-Loop and Open-Loop simulation, the phase margin is positive which addresses the circuit is stable. To predict where would each pole appears, following equations were used.
-\begin{equation}
-\omega_1 = \frac{1}{R_o*C_c}
-\end{equation}
-\begin{equation}
-\omega_2 = \frac{1}{R_{o2}*C_L}
-\end{equation}
-\begin{equation}
-\omega_3 = \frac{1}{2*R_{o6,7}*C_{gs2}}
-\end{equation}\\
-These equations were used to guide the estimation so we could predict around where the pole would exist with different values. However since the difference between prediction and simulation was fairly high, various simulations were made to adjust amplifier in order to satisfy the requirements. Based on figure (5), the bandwidth of the amplifier is \(389.02kHz\) which satisfies the design requirements from table (1)\\
-
-With the fully built Closed-Loop amplifier circuit, the simulation results to verify whether the design satisfies requirements are following on figure (6), (7).
-
-
-Both figures address that the amplifier satisfies all requirements, peak overshoot, settling time and steady-state error.  Based on the results, table 3 was made to conclude that the design successfully satisfy all the requirements.\\
-\begin{table}[!hbt]
-	\centering
-	\begin{tabular}{|c|c|c|}
-	\hline
-	&Requirements&Result\\
-	\hline	
-	Settling time (s) & \(< 100 \mu \)s & \(\approx 30\mu \)s \\
-	Input Step (V) & \(10 mV\)&\(9.9999mV\)\\
-	Overshoot Voltage (V) & \(\leq 10.5 mV\)&\(10.389 mV\)\\
-	Steady-State Error (V) & \(<10 \mu V\)&\(8.19\mu V\)\\
-	Amplifier Gain & \(A_o \geq\ 999, 60 dB\)&\(112.5dB\)\\
-	Closed-loop Bandwidth & \(\geq 7.96 kHz\)&\(389.02kHz\)\\
-	\hline
-	\end{tabular}
-	\caption{Requirements and Result}\label{table: 3}
-\end{table}\\
-\section{Conclusion}
 
 \begin{thebibliography}{1}
 
@@ -214,44 +118,6 @@ K~. Smith, A~. Smith, \emph{Microelectronic circuits(Oxford series in electrical
 
 \onecolumn
 
-\section{Appendices}
-\noindent SPICE Netlist:\\
-\begin{lstlisting}
-
-
-\end{lstlisting}
-
-
-%\includepdf[landscape=true]{1.pdf}
-
-
-% trigger a \newpage just before the given reference
-% number - used to balance the columns on the last page
-% adjust value as needed - may need to be readjusted if
-% the document is modified later
-%\IEEEtriggeratref{8}
-% The "triggered" command can be changed if desired:
-%\IEEEtriggercmd{\enlargethispage{-5in}}
-
-% references section
-
-% can use a bibliography generated by BibTeX as a .bbl file
-% BibTeX documentation can be easily obtained at:
-% http://mirror.ctan.org/biblio/bibtex/contrib/doc/
-% The IEEEtran BibTeX style support page is at:
-% http://www.michaelshell.org/tex/ieeetran/bibtex/
-%\bibliographystyle{IEEEtran}
-% argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IEEEabrv,../bib/paper}
-%
-% <OR> manually copy in the resultant .bbl file
-% set second argument of \begin to the number of references
-% (used to reserve space for the reference number labels box)
-
-
-
-
-% that's all folks
 \end{document}
 
 

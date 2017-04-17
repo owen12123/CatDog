@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 APR 2017 17:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 APR 2017 18:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -477,9 +477,9 @@ Overfull \hbox (1.41376pt too wide) in paragraph at lines 88--88
 File: goodFace2.jpg Graphic file (type jpg)
  <use goodFace2.jpg>
 Package pdftex.def Info: goodFace2.jpg used on input line 94.
-(pdftex.def)             Requested size: 135.51877pt x 135.5059pt.
+(pdftex.def)             Requested size: 146.81276pt x 146.79877pt.
 
-Overfull \hbox (22.5969pt too wide) in paragraph at lines 94--94
+Overfull \hbox (33.89088pt too wide) in paragraph at lines 94--94
 [][] 
  []
 
@@ -487,93 +487,34 @@ Overfull \hbox (22.5969pt too wide) in paragraph at lines 94--94
 File: dogeFace.jpg Graphic file (type jpg)
  <use dogeFace.jpg>
 Package pdftex.def Info: dogeFace.jpg used on input line 95.
-(pdftex.def)             Requested size: 138.27335pt x 135.5059pt.
+(pdftex.def)             Requested size: 149.79707pt x 146.79877pt.
 
-Overfull \hbox (25.35147pt too wide) in paragraph at lines 95--95
+Overfull \hbox (36.8752pt too wide) in paragraph at lines 95--95
 [][] 
  []
 
-<badFace.jpg, id=17, 150.5625pt x 160.6pt>
-File: badFace.jpg Graphic file (type jpg)
- <use badFace.jpg>
-Package pdftex.def Info: badFace.jpg used on input line 96.
-(pdftex.def)             Requested size: 127.04138pt x 135.5059pt.
+<smolrect.jpg, id=17, 150.5625pt x 160.6pt>
+File: smolrect.jpg Graphic file (type jpg)
+ <use smolrect.jpg>
+Package pdftex.def Info: smolrect.jpg used on input line 96.
+(pdftex.def)             Requested size: 137.62778pt x 146.79877pt.
 
-Overfull \hbox (14.1195pt too wide) in paragraph at lines 96--96
+Overfull \hbox (24.7059pt too wide) in paragraph at lines 96--96
 [][] 
  []
 
-<badFace2.jpg, id=18, 150.5625pt x 200.75pt>
-File: badFace2.jpg Graphic file (type jpg)
- <use badFace2.jpg>
-Package pdftex.def Info: badFace2.jpg used on input line 97.
-(pdftex.def)             Requested size: 101.63678pt x 135.5059pt.
+<smolrect2.jpg, id=18, 150.5625pt x 200.75pt>
+File: smolrect2.jpg Graphic file (type jpg)
+ <use smolrect2.jpg>
+Package pdftex.def Info: smolrect2.jpg used on input line 97.
+(pdftex.def)             Requested size: 110.10727pt x 146.79877pt.
  [1
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+] [2
 
- []
-
-[2 <./naisubodi2.jpg> <./good3.jpg> <./terrible1.jpg> <./terrible5.jpg> <./good
-Face2.jpg> <./dogeFace.jpg> <./badFace.jpg> <./badFace2.jpg>]
-Underfull \hbox (badness 3460) in paragraph at lines 128--158
-\OT1/ptm/m/n/10.03749 A Mi-crosoft Ex-cel spread-sheet was cre-ated for the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--158
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 159--161
-
- []
-
-
-Underfull \hbox (badness 2653) in paragraph at lines 159--161
-\OT1/ptm/m/n/10.03749 -4.8900$\OML/cmm/m/it/10 ^^V$\OT1/ptm/m/n/10.03749 A. The
-re-fore the power con-sump-tion of the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--170
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
-
- []
-
-
-Underfull \hbox (badness 5008) in paragraph at lines 183--185
-\OT1/ptm/m/n/10.03749 with dif-fer-ent val-ues. How-ever since the dif-fer-ence
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--185
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--206
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
-
- []
-
+ <./naisubodi2.jpg> <./good3.jpg> <./terrible1.jpg> <./terrible5.jpg> <./goodFa
+ce2.jpg> <./dogeFace.jpg> <./smolrect.jpg> <./smolrect2.jpg>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -585,37 +526,24 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4
-
-] (./final report.aux) ) 
+(./final report.aux) ) 
 Here is how much of TeX's memory you used:
- 5099 strings out of 493089
- 79344 string characters out of 6134842
- 160674 words of memory out of 5000000
- 8508 multiletter control sequences out of 15000+600000
- 50707 words of font info for 89 fonts, out of 8000000 for 9000
+ 5091 strings out of 493089
+ 79274 string characters out of 6134842
+ 157658 words of memory out of 5000000
+ 8501 multiletter control sequences out of 15000+600000
+ 48983 words of font info for 87 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 38i,12n,39p,1008b,832s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/bas
-e/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cme
-x10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.p
-fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "final report.pdf" (5 pages, 638635 bytes).
+ 38i,12n,39p,1008b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/
+8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
+.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "final report.pdf" (3 pages, 534084 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 42 PDF objects out of 1000 (max. 8388607)
+ 22 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
