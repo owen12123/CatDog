@@ -10,12 +10,14 @@
   % normal IEEE
   \usepackage{cite}
 \fi
-
+%\usepackage{graphicx}
+%\usepackage{subcaption}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 \usepackage{listings}
 \usepackage[final]{pdfpages}
-
+\usepackage{multicol}
+\usepackage{dblfloatfix}
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 
@@ -63,43 +65,50 @@
 % no \IEEEPARstart
 Most research for object classification was more focused on classifying images that are completely different (ex. horse and ship). In this project, we classify whether the image contains a picture of dog or cat. We were given 5906 images from [Cat and Dog paper]. We trained animal body detection and classification using 1500 images of cat and dog each. We used Haar features to detect the portion of the image containing the animal. Computation of the LBP histogram provides feature of the image for the classification. And then, we used  SVM to define whether the image contains dogs or cats.
 
-\subsection{Amplifier requirements}
-The student id of the student is 260633759. The supply voltage level can be calculated based on the equation:\\
-\[
-V_{ss} = 5 + \frac{4^{th} + 3^{rd} \textit{ digits from the end} }{20}
-\]
-the minimum gain \(A_o\) is:\\
-\[
-A_c = \frac{1}{1 + \frac{1}{•A_o}}
-\]
-Since settling time is 100 \(\mu \)s, and \(\textit{settling time} \approx 5\tau\) where the equation for bandwidth is:\\
-\[
-\frac{1}{2\pi\tau}
-\]
-From the project description and after all calculation were made, a table for requirements is follow:\\
-\begin{table}[!hbt]
-	\centering
-	\begin{tabular}{|c|c|}
-	\hline
-	DC Output Supply Voltage (V) & \(\pm 6.85V\)\\
-	Settling time (s) & \(< 100 \mu \)s \\
-	Input Step (V) & \(10 mV\)\\
-	Overshoot Voltage (V) & \(\leq 10.5 mV\)\\
-	Steady-State Error (V) & \(<10 \mu V\)\\
-	Transistors & MOSFET CD4007\\
-	Load Capacitor & \(5 pF\)\\
-	Amplifier Gain & \(A_o \geq\ 999, 60 dB\)\\
-	Closed-loop Bandwidth & \(\geq 7.96 kHz\)\\
-	\hline
-	\end{tabular}
-	\caption{Amplifier Requirements}\label{table: 1}
-\end{table}
 
 \section{Problem Representation}
+The goal of this project is to devise a machine learning algorithm to analyse images and classify them to their respective categories. The datasets for training and testing, which consist of 7384 images, were given from [kaggle website]. The ratio of dog and cat images in given dataset was 2:1. In order to fix training bias due to data inequality, we used external dataset from [cat face] which includes 4004 cat face, and 2271 cat ear images. \\
+
+In order to tackle this problem, we built face detection and body detection in order to limit features to classify. Face detection is prior to be classified because it is easier and more accurate to classify if the detection system can detect face. If we include the entire body, there are numerous different data exists depends on gesture of the animal and photo inclusion of the animal (i.e photo includes only face, chest and up or the entire body). In [McGill Cat and Dog project paper], using classification based on face detection performed better than body detection. We used Haar feature detection from [Viola and Jones 2001] for both face detection and body detection\\
+
+We used Local Binary Pattern (LBP) histogram from [LBP paper] to extract histogram data for classification. Consider we are using face detection, LBP histogram has advantage of face classification because LBP is fast and proven to perform well in classification based on face feature [LBP face detection]. After extract histogram data, Linear Support Vector Machine (LSVM) was used to classify whether the image includes cat or dog.
+
+\section{Algorithm selection and implementation}
+For object detection, we used Haar feature detection from [Viola and Jones 2001] for cascade trainer. Haar feature detection was chosen because we prior to use face detection and Haar performs fast and accurately [Viola Jones 2001]. We used pre-built OpenCV annotation program to select face and body region from the image. For body detection training, we used 3000 images from [kaggle website] dataset. For face detection training, we used 8000 images from [kaggle website] and [cat face] dataset. A vector file of image data was created before training in order to store annotated image data. After creating vector file, we trained the cascade to create a xml file. We used 14 stages for face detection and 17 stages for body detection. Before detect the face with test image, we use Gaussian filter to simplify features which increases detecting performance. Figure 1 addresses succeed and failed face detection example, figure 2 addresses succeed and failed body detection example.\\
+
+After object detection, we use LBP from [LBP paper] and get histogram of face or body part. If the face detection program failed to detect face, body detection activates instead. We trained 2804 images for LBP from [kaggle website]. Single cell LBP was used because consider the face detection succeed, the image indicates the face of dog/cat is very small, therefore it would not be worth to use multiple cell LBP.\\
+
+LSVM from sklearn library [sklearn library] was used to give linear line to separate dog and cat feature.
+
+\begin{figure*}
+	\begin{multicols}{4}
+    		\includegraphics[height=1.35\linewidth]{naisubodi2.jpg}\par 
+    		\includegraphics[height=1.35\linewidth]{good3.jpg}\par 
+    		\includegraphics[height=1.35\linewidth]{terrible1.jpg}\par
+    		\includegraphics[height=1.35\linewidth]{terrible5.jpg}\par
+	\end{multicols}
+	\caption{Body detection result (left : succeed, right : failed)}
+\end{figure*}
+\begin{figure*}
+	\begin{multicols}{4}
+    		\includegraphics[height=1.2\linewidth]{goodFace2.jpg}\par 
+    		\includegraphics[height=1.2\linewidth]{dogeFace.jpg}\par 
+    		\includegraphics[height=1.2\linewidth]{badFace.jpg}\par
+    		\includegraphics[height=1.2\linewidth]{badFace2.jpg}\par
+	\end{multicols}
+	\caption{Face detection result (left : succeed, right : failed)}
+\end{figure*}
 
 
-
+\section{Testing}
+The project is separated into two different section, object detection and classification. Both sections tested separately before merged. This section describes how they were tested and the result of the project.
+\subsection{Object Detection}
+For both face and body detection, we trained the xml file with different number of stages, different distribution of face type, and different section of faces. With 4000 face images, cat detector performed best with 14~16 stages. Above 16 stages, the detector could not detect face
+\subsection{Classification}
+\subsection{Kaggle Result}
 \section{Discussion}
+
+
 \subsection{Circuit description}
 The CMOS two-stage amplifier consists of two current
 mirrors, a differential amplifier and a cascade circuit. The circuit diagram is drawn in figure 1. For ease of calculation, the circuit is designed to have 1V \(V_{ov}\) for all MOSFETs.  A value of \(50 k\Omega\) was chosen for reference resistor, \(R\_ref\) and \(0.1 pF\) was chosen for compensation capacitor, \(C\_c\). Using Equation (1) , this design is calculated to generate an open-loop gain, \(A_o\), of 1254 which satisfies the requirements. Using the circuit, simulated result clearly does not satisfies the design requirement. The output voltage, \(V\_o\), has a massive continuous pulse which does not satisfy the design requirement which addresses that both \(R\_ref\) and \(C\_c\) values have to be changed. This is depicted in figure 2.

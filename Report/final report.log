@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 APR 2017 13:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 APR 2017 17:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -235,35 +235,98 @@ File: pppdftex.def 2015/05/11 v0.4x Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count106
 \AM@templatesizebox=\box31
 )
-(./final report.aux)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2015/03/31 v1.8m multicolumn formatting (FMi)
+\c@tracingmulticols=\count107
+\mult@box=\box32
+\multicol@leftmargin=\dimen135
+\c@unbalance=\count108
+\c@collectmore=\count109
+\doublecol@number=\count110
+\multicoltolerance=\count111
+\multicolpretolerance=\count112
+\full@width=\dimen136
+\page@free=\dimen137
+\premulticols=\dimen138
+\postmulticols=\dimen139
+\multicolsep=\skip47
+\multicolbaselineskip=\skip48
+\partial@page=\box33
+\last@line=\box34
+\maxbalancingoverflow=\dimen140
+\mult@rightbox=\box35
+\mult@grightbox=\box36
+\mult@gfirstbox=\box37
+\mult@firstbox=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\c@columnbadness=\count113
+\c@finalcolumnbadness=\count114
+\last@try=\dimen141
+\multicolovershoot=\dimen142
+\multicolundershoot=\dimen143
+\mult@nat@firstbox=\box56
+\colbreak@box=\box57
+\mc@col@check@num=\count115
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/dblfloatfix/dblfloatfix.sty
+Package: dblfloatfix 2012/12/31 v1.0a (JAW)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2015/02/21 v2.0a fixes to LaTeX (obsolete)
+
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+)
+\@dblbotnum=\count116
+\c@dblbotnumber=\count117
+) (./final report.aux)
 \openout1 = `"final report.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 -- Lines per column: 58 (exact).
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count107
-\scratchdimen=\dimen135
-\scratchbox=\box32
-\nofMPsegments=\count108
-\nofMParguments=\count109
+\scratchcounter=\count118
+\scratchdimen=\dimen144
+\scratchbox=\box58
+\nofMPsegments=\count119
+\nofMParguments=\count120
 \everyMPshowfont=\toks18
-\MPscratchCnt=\count110
-\MPscratchDim=\dimen136
-\MPnumerator=\count111
-\makeMPintoPDFobject=\count112
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen145
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
 \everyMPtoPDFconversion=\toks19
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -309,128 +372,205 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count113
-\AtBeginShipoutBox=\box33
+\c@lstlisting=\count124
+\AtBeginShipoutBox=\box59
 
 <McGill_Logo.png, id=1, 2007.5pt x 473.77pt>
 File: McGill_Logo.png Graphic file (type png)
  <use McGill_Logo.png>
-Package pdftex.def Info: McGill_Logo.png used on input line 26.
+Package pdftex.def Info: McGill_Logo.png used on input line 28.
 (pdftex.def)             Requested size: 252.94499pt x 59.691pt.
  [0
 
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./McGil
 l_Logo.png>]
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 56.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 58.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.05249> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
-LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 56
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 58
 .
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <11.04124> on input line 56.
+(Font)              <11.04124> on input line 58.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7.72884> on input line 56.
+(Font)              <7.72884> on input line 58.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.52061> on input line 56.
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 56.
+(Font)              <5.52061> on input line 58.
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 58.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8.03> on input line 56.
+(Font)              <8.03> on input line 58.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.62097> on input line 56.
+(Font)              <5.62097> on input line 58.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.015> on input line 56.
-LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 56
+(Font)              <4.015> on input line 58.
+LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 58
 .
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.03749> on input line 56.
+(Font)              <10.03749> on input line 58.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7.0262> on input line 56.
+(Font)              <7.0262> on input line 58.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.01874> on input line 56.
+(Font)              <5.01874> on input line 58.
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+Underfull \hbox (badness 1755) in paragraph at lines 70--71
+[]\OT1/ptm/m/n/10.03749 The goal of this project is to de-vise a ma-chine
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--72
-
- []
-
-Missing character: There is no â in font cmr7!
-Missing character: There is no € in font cmr7!
-Missing character: There is no ¢ in font cmr7!
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--76
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
+Underfull \hbox (badness 1418) in paragraph at lines 77--78
+\OT1/ptm/m/n/10.03749 face de-tec-tion and Haar per-forms fast and ac-cu-rately
 
  []
 
 
-Underfull \hbox (badness 3460) in paragraph at lines 119--149
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+<naisubodi2.jpg, id=11, 334.24875pt x 501.875pt>
+File: naisubodi2.jpg Graphic file (type jpg)
+ <use naisubodi2.jpg>
+Package pdftex.def Info: naisubodi2.jpg used on input line 85.
+(pdftex.def)             Requested size: 101.53004pt x 152.4452pt.
+
+<good3.jpg, id=12, 339.2675pt x 501.875pt>
+File: good3.jpg Graphic file (type jpg)
+ <use good3.jpg>
+Package pdftex.def Info: good3.jpg used on input line 86.
+(pdftex.def)             Requested size: 103.05452pt x 152.4452pt.
+
+<terrible1.jpg, id=13, 358.33875pt x 501.875pt>
+File: terrible1.jpg Graphic file (type jpg)
+ <use terrible1.jpg>
+Package pdftex.def Info: terrible1.jpg used on input line 87.
+(pdftex.def)             Requested size: 108.84753pt x 152.4452pt.
+
+<terrible5.jpg, id=14, 376.40625pt x 501.875pt>
+File: terrible5.jpg Graphic file (type jpg)
+ <use terrible5.jpg>
+Package pdftex.def Info: terrible5.jpg used on input line 88.
+(pdftex.def)             Requested size: 114.33563pt x 152.4452pt.
+
+Overfull \hbox (1.41376pt too wide) in paragraph at lines 88--88
+[][] 
+ []
+
+<goodFace2.jpg, id=15, 150.5625pt x 150.5625pt>
+File: goodFace2.jpg Graphic file (type jpg)
+ <use goodFace2.jpg>
+Package pdftex.def Info: goodFace2.jpg used on input line 94.
+(pdftex.def)             Requested size: 135.51877pt x 135.5059pt.
+
+Overfull \hbox (22.5969pt too wide) in paragraph at lines 94--94
+[][] 
+ []
+
+<dogeFace.jpg, id=16, 150.5625pt x 147.55125pt>
+File: dogeFace.jpg Graphic file (type jpg)
+ <use dogeFace.jpg>
+Package pdftex.def Info: dogeFace.jpg used on input line 95.
+(pdftex.def)             Requested size: 138.27335pt x 135.5059pt.
+
+Overfull \hbox (25.35147pt too wide) in paragraph at lines 95--95
+[][] 
+ []
+
+<badFace.jpg, id=17, 150.5625pt x 160.6pt>
+File: badFace.jpg Graphic file (type jpg)
+ <use badFace.jpg>
+Package pdftex.def Info: badFace.jpg used on input line 96.
+(pdftex.def)             Requested size: 127.04138pt x 135.5059pt.
+
+Overfull \hbox (14.1195pt too wide) in paragraph at lines 96--96
+[][] 
+ []
+
+<badFace2.jpg, id=18, 150.5625pt x 200.75pt>
+File: badFace2.jpg Graphic file (type jpg)
+ <use badFace2.jpg>
+Package pdftex.def Info: badFace2.jpg used on input line 97.
+(pdftex.def)             Requested size: 101.63678pt x 135.5059pt.
+ [1
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+
+ []
+
+[2 <./naisubodi2.jpg> <./good3.jpg> <./terrible1.jpg> <./terrible5.jpg> <./good
+Face2.jpg> <./dogeFace.jpg> <./badFace.jpg> <./badFace2.jpg>]
+Underfull \hbox (badness 3460) in paragraph at lines 128--158
 \OT1/ptm/m/n/10.03749 A Mi-crosoft Ex-cel spread-sheet was cre-ated for the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--149
-
- []
-
-[1
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 150--152
+Underfull \hbox (badness 10000) in paragraph at lines 128--158
 
  []
 
 
-Underfull \hbox (badness 2653) in paragraph at lines 150--152
+Underfull \hbox (badness 10000) in paragraph at lines 159--161
+
+ []
+
+
+Underfull \hbox (badness 2653) in paragraph at lines 159--161
 \OT1/ptm/m/n/10.03749 -4.8900$\OML/cmm/m/it/10 ^^V$\OT1/ptm/m/n/10.03749 A. The
 re-fore the power con-sump-tion of the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
 
  []
 
 
-Underfull \hbox (badness 5008) in paragraph at lines 174--176
+Underfull \hbox (badness 5008) in paragraph at lines 183--185
 \OT1/ptm/m/n/10.03749 with dif-fer-ent val-ues. How-ever since the dif-fer-ence
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--176
+Underfull \hbox (badness 10000) in paragraph at lines 183--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--197
+Underfull \hbox (badness 10000) in paragraph at lines 189--206
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
 
  []
 
@@ -445,38 +585,37 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3
+[4
 
 ] (./final report.aux) ) 
 Here is how much of TeX's memory you used:
- 4919 strings out of 493089
- 76368 string characters out of 6134842
- 155663 words of memory out of 5000000
- 8347 multiletter control sequences out of 15000+600000
+ 5099 strings out of 493089
+ 79344 string characters out of 6134842
+ 160674 words of memory out of 5000000
+ 8508 multiletter control sequences out of 15000+600000
  50707 words of font info for 89 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 38i,12n,39p,796b,832s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,12n,39p,1008b,832s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/bas
 e/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cme
 x10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.p
-fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/f
-onts/type1/urw/times/utmri8a.pfb>
-Output written on "final report.pdf" (4 pages, 251786 bytes).
+10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6
+.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.p
+fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "final report.pdf" (5 pages, 638635 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 92 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
