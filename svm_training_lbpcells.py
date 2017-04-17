@@ -119,12 +119,13 @@ for i in range(0,len(filenames)):
 				cell_r = xwMax
 			if k == 4:
 				cell_d = yhMax
-			cells.append(cropped_img[cell_l:cell_r,cell_u:cell_d])
+			img_part = cropped_img[cell_l:cell_r,cell_u:cell_d]
+			cells.append(img_part)
 	print(cells[0])
 	for j in range(0,25):
 		lbp = local_binary_pattern(cells[j], 8, 1, "default")
 		hist, _ = np.histogram(lbp, 256, density=True)
-		xData[i,(25*j):(25(j+1))] = hist
+		xData[i,(25*j):(25*j+256)] = hist
 
 	#zero = not hist.any()
 	#if(zero):
