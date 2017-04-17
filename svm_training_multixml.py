@@ -97,7 +97,7 @@ for i in range(0,len(filenames)):
 		xMin,yMin,xwMax,yhMax = 0,0,width,height		
 	
 	# make one large rectangle by using extreme coordinates of smaller rectangles
-	# and use that region to compute LBP and the LBP's normalize 
+	# and use that region to compute LBP and the LBP's normalized histogram 
 	cropped_img = gray[yMin:yhMax,xMin:xwMax]	
 	lbp = local_binary_pattern(cropped_img, 8, 1, "default")
 	hist, _ = np.histogram(lbp, 256, density=True)
