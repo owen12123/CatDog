@@ -66,8 +66,6 @@ cv2.rectangle(imagef, (xMin, yMin), (xwMax, yhMax), (0, 0, 255), 2)
 
 for (i, (x, y, w, h)) in enumerate(rects):
 	cv2.rectangle(imagef, (x, y), (x + w, y + h), (255, 0, 0), 2)
-	cv2.putText(imagef, "{}".format(i + 1), (x, y - 10),
-		cv2.FONT_HERSHEY_SIMPLEX, 0.55, (0, 0, 255), 2)
 
 # show the detected faces
 cv2.imshow("Animal Faces", imagef)
