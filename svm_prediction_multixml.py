@@ -32,9 +32,9 @@ xml2 = 'Classifier_cat_4k/cascade.xml'
 detector1 = cv2.CascadeClassifier(xml1)
 detector2 = cv2.CascadeClassifier(xml2)
 
-clf = joblib.load('Training_Models/4kcatdogface.pkl')
+clf = joblib.load('Training_Models/RBF.pkl')
 
-outputpath = '4kcatdogface.csv'
+outputpath = 'RBF.csv'
 
 filenames = []
 for root, dirs, files in os.walk('C:/Users/Raymond/Desktop/X_Test'):
