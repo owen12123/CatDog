@@ -91,21 +91,23 @@ LSVM from sklearn library [sklearn library] was used to give linear line to sepa
 \end{figure*}
 \begin{figure*}
 	\begin{multicols}{4}
-    		\includegraphics[height=1.3\linewidth]{goodFace2.jpg}\par 
-    		\includegraphics[height=1.3\linewidth]{dogeFace.jpg}\par 
-    		\includegraphics[height=1.3\linewidth]{smolrect.jpg}\par
-    		\includegraphics[height=1.3\linewidth]{smolrect2.jpg}\par
+    		\includegraphics[height=1.35\linewidth]{goodFace2.jpg}\par 
+    		\includegraphics[height=1.35\linewidth]{dogeFace.jpg}\par 
+    		\includegraphics[height=1.35\linewidth]{smolrect.jpg}\par
+    		\includegraphics[height=1.35\linewidth]{smolrect2.jpg}\par
 	\end{multicols}
 	\caption{Face detection result (left : succeed, right : failed)}
 \end{figure*}
 
 
 \section{Testing}
-The project is separated into two different section, object detection and classification. Both sections tested separately before merged. This section describes how they were tested and the result of the project.
+The project is separated into two different section, object detection and classification.  This section describes how they were tested and the result of the project.
 \subsection{Object Detection}
-For both face and body detection, we trained the xml file with different number of stages, different distribution of face type, and different section of faces. With 4000 face images, cat detector performed best with 14~16 stages. Above 16 stages, the detector could not detect anything frequently. Below 14 stages, the detector includes wrong features and add unnecessary part which fails the purpose of face detection. Even with the optimized stages, we still could see detector detects wrong features and adds unnecessary parts which is addressed in Figure 2. 
+For both face and body detection, we trained the xml file with different number of stages, different distribution of face type, and different section of faces. With 4000 face images, cat detector performed best with 14~16 stages. Above 16 stages, the detector could not detect anything frequently. Below 14 stages, the detector includes wrong features and add unnecessary part which fails the purpose of face detection. Even with the optimized stages, we still could see the detector detects wrong features and adds unnecessary parts which is addressed in Figure 2. Right images include faces properly, however they also include other unnecessary parts which failed the face detection. Consider the image contains the face of animal in different angle, we distributed cat face photo before training. Out of 4000 cat face photos, we used 2500 front open eye, 800 front closed eye and 700 side view of the cat face which improved the performance in general. We also trained an additional training xml file consist of cat ear only. We used 2100 cat ear photo and ran the detection with cat face xml. However this did not improve the performance therefore we discarded it.\\
+
+In case of body detection, it detects the entire or major parts of animal. Even in the failed cases, the detector succeed to detect the body of animal but did not include the entire body. However since part of animal is included we still could use classify program to decide whether the object is a cat or a dog. However the classification performance would drop because using entire body gives numerous characteristics which overwhelms LBP histogram classification [McGill Cat and Dog].
 \subsection{Classification}
-\subsection{Kaggle Result}
+After classification, we obtained 66.6\% of accuracy which was below our expectation. The csv file is consist of mostly 1s which indicates the SVM is biased to dog. We suspect several different reasons which are briefly indicated in section 5.
 \section{Discussion}
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 APR 2017 18:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 APR 2017 19:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -477,9 +477,9 @@ Overfull \hbox (1.41376pt too wide) in paragraph at lines 88--88
 File: goodFace2.jpg Graphic file (type jpg)
  <use goodFace2.jpg>
 Package pdftex.def Info: goodFace2.jpg used on input line 94.
-(pdftex.def)             Requested size: 146.81276pt x 146.79877pt.
+(pdftex.def)             Requested size: 152.45976pt x 152.4452pt.
 
-Overfull \hbox (33.89088pt too wide) in paragraph at lines 94--94
+Overfull \hbox (39.53789pt too wide) in paragraph at lines 94--94
 [][] 
  []
 
@@ -487,9 +487,9 @@ Overfull \hbox (33.89088pt too wide) in paragraph at lines 94--94
 File: dogeFace.jpg Graphic file (type jpg)
  <use dogeFace.jpg>
 Package pdftex.def Info: dogeFace.jpg used on input line 95.
-(pdftex.def)             Requested size: 149.79707pt x 146.79877pt.
+(pdftex.def)             Requested size: 155.55894pt x 152.4452pt.
 
-Overfull \hbox (36.8752pt too wide) in paragraph at lines 95--95
+Overfull \hbox (42.63707pt too wide) in paragraph at lines 95--95
 [][] 
  []
 
@@ -497,9 +497,9 @@ Overfull \hbox (36.8752pt too wide) in paragraph at lines 95--95
 File: smolrect.jpg Graphic file (type jpg)
  <use smolrect.jpg>
 Package pdftex.def Info: smolrect.jpg used on input line 96.
-(pdftex.def)             Requested size: 137.62778pt x 146.79877pt.
+(pdftex.def)             Requested size: 142.92097pt x 152.4452pt.
 
-Overfull \hbox (24.7059pt too wide) in paragraph at lines 96--96
+Overfull \hbox (29.9991pt too wide) in paragraph at lines 96--96
 [][] 
  []
 
@@ -507,14 +507,25 @@ Overfull \hbox (24.7059pt too wide) in paragraph at lines 96--96
 File: smolrect2.jpg Graphic file (type jpg)
  <use smolrect2.jpg>
 Package pdftex.def Info: smolrect2.jpg used on input line 97.
-(pdftex.def)             Requested size: 110.10727pt x 146.79877pt.
- [1
+(pdftex.def)             Requested size: 114.34137pt x 152.4452pt.
+
+Overfull \hbox (1.4195pt too wide) in paragraph at lines 97--97
+[][] 
+ []
 
 
-] [2
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
- <./naisubodi2.jpg> <./good3.jpg> <./terrible1.jpg> <./terrible5.jpg> <./goodFa
-ce2.jpg> <./dogeFace.jpg> <./smolrect.jpg> <./smolrect2.jpg>]
+ []
+
+[1
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 <./naisubodi2.jpg> <./good3.jpg> <./terrible1.jpg> <./terrible5.jpg> <./goo
+dFace2.jpg> <./dogeFace.jpg> <./smolrect.jpg> <./smolrect2.jpg>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -530,17 +541,17 @@ Before submitting the final camera ready copy, remember to:
 Here is how much of TeX's memory you used:
  5091 strings out of 493089
  79274 string characters out of 6134842
- 157658 words of memory out of 5000000
+ 159658 words of memory out of 5000000
  8501 multiletter control sequences out of 15000+600000
  48983 words of font info for 87 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 38i,12n,39p,1008b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,12n,39p,1191b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/
 8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
 .pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "final report.pdf" (3 pages, 534084 bytes).
+Output written on "final report.pdf" (3 pages, 536075 bytes).
 PDF statistics:
  42 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream
