@@ -16,7 +16,7 @@ def csv_reader(file_obj):
 
 # load haar-feature based classifiers
 xml1 = 'Classifiers/4kdogcascade.xml'
-xml2 = 'Classifier_cat_4k/cascade.xml'
+xml2 = 'Classifiers/4kcatcascade.xml'
 
 # create cascade classifier objects
 detector1 = cv2.CascadeClassifier(xml1)

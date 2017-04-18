@@ -10,7 +10,7 @@ args = vars(ap.parse_args())
 
 # set paths of haar-feature based classifiers
 xml1 = 'Classifiers/4kdogcascade.xml'
-xml2 = 'Classifier_cat_4k/cascade.xml'
+xml2 = 'Classifiers/4kcatcascade.xml'
 
 # load input image, resize it, convert it to grayscale, and pass a 5x5 gaussian flter over it
 image = cv2.imread(args["image"])
@@ -64,6 +64,7 @@ else:
 # draw large rectangle based on extreme coordinates of small rectangles
 cv2.rectangle(imagef, (xMin, yMin), (xwMax, yhMax), (0, 0, 255), 2)
 
+# display smaller rectangles
 for (i, (x, y, w, h)) in enumerate(rects):
 	cv2.rectangle(imagef, (x, y), (x + w, y + h), (255, 0, 0), 2)
 
@@ -72,4 +73,4 @@ cv2.imshow("Animal Faces", imagef)
 cv2.waitKey(0)
 
 # save image with face detection rectangle
-cv2.imwrite('photo.jpg', imagef)
+#cv2.imwrite('photo.jpg', imagef)

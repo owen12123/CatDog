@@ -15,17 +15,17 @@ def csv_writer(data, path):
 
 # load haar-feature based classifiers
 xml1 = 'Classifiers/4kdogcascade.xml'
-xml2 = 'Classifier_cat_4k/cascade.xml'
+xml2 = 'Classifiers/4kcatcascade.xml'
 
 # create cascade classifier objects
 detector1 = cv2.CascadeClassifier(xml1)
 detector2 = cv2.CascadeClassifier(xml2)
 
 # load training model
-clf = joblib.load('Training_Models/4kcatdogface.pkl')
+clf = joblib.load('Training_Models/training_model.pkl')
 
 # set path for output csv file
-outputpath = '4kcatdogface.csv'
+outputpath = 'predictions.csv'
 
 # generate list of files from test image folder
 filenames = []
