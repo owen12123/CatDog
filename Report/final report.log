@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 APR 2017 19:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 APR 2017 22:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -298,7 +298,32 @@ Package fixltx2e Warning: fixltx2e is not required with releases after 2015
 )
 \@dblbotnum=\count116
 \c@dblbotnumber=\count117
-) (./final report.aux)
+) (./final report.aux
+
+LaTeX Warning: Label `lamport94' multiply defined.
+
+
+LaTeX Warning: Label `lamport94' multiply defined.
+
+
+LaTeX Warning: Label `lamport94' multiply defined.
+
+
+LaTeX Warning: Label `lamport94' multiply defined.
+
+
+LaTeX Warning: Label `lamport94' multiply defined.
+
+
+LaTeX Warning: Label `lamport94' multiply defined.
+
+
+LaTeX Warning: Label `lamport94' multiply defined.
+
+
+LaTeX Warning: Label `lamport94' multiply defined.
+
+)
 \openout1 = `"final report.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
@@ -415,106 +440,90 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5.01874> on input line 58.
 
-Underfull \hbox (badness 1755) in paragraph at lines 70--71
-[]\OT1/ptm/m/n/10.03749 The goal of this project is to de-vise a ma-chine
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
-
- []
-
-
-Underfull \hbox (badness 1418) in paragraph at lines 77--78
-\OT1/ptm/m/n/10.03749 face de-tec-tion and Haar per-forms fast and ac-cu-rately
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
 
 <naisubodi2.jpg, id=11, 334.24875pt x 501.875pt>
 File: naisubodi2.jpg Graphic file (type jpg)
  <use naisubodi2.jpg>
-Package pdftex.def Info: naisubodi2.jpg used on input line 85.
+Package pdftex.def Info: naisubodi2.jpg used on input line 76.
 (pdftex.def)             Requested size: 101.53004pt x 152.4452pt.
 
 <good3.jpg, id=12, 339.2675pt x 501.875pt>
 File: good3.jpg Graphic file (type jpg)
  <use good3.jpg>
-Package pdftex.def Info: good3.jpg used on input line 86.
+Package pdftex.def Info: good3.jpg used on input line 77.
 (pdftex.def)             Requested size: 103.05452pt x 152.4452pt.
 
 <terrible1.jpg, id=13, 358.33875pt x 501.875pt>
 File: terrible1.jpg Graphic file (type jpg)
  <use terrible1.jpg>
-Package pdftex.def Info: terrible1.jpg used on input line 87.
+Package pdftex.def Info: terrible1.jpg used on input line 78.
 (pdftex.def)             Requested size: 108.84753pt x 152.4452pt.
 
 <terrible5.jpg, id=14, 376.40625pt x 501.875pt>
 File: terrible5.jpg Graphic file (type jpg)
  <use terrible5.jpg>
-Package pdftex.def Info: terrible5.jpg used on input line 88.
+Package pdftex.def Info: terrible5.jpg used on input line 79.
 (pdftex.def)             Requested size: 114.33563pt x 152.4452pt.
 
-Overfull \hbox (1.41376pt too wide) in paragraph at lines 88--88
+Overfull \hbox (1.41376pt too wide) in paragraph at lines 79--79
 [][] 
  []
 
 <goodFace2.jpg, id=15, 150.5625pt x 150.5625pt>
 File: goodFace2.jpg Graphic file (type jpg)
  <use goodFace2.jpg>
-Package pdftex.def Info: goodFace2.jpg used on input line 94.
+Package pdftex.def Info: goodFace2.jpg used on input line 85.
 (pdftex.def)             Requested size: 152.45976pt x 152.4452pt.
 
-Overfull \hbox (39.53789pt too wide) in paragraph at lines 94--94
+Overfull \hbox (39.53789pt too wide) in paragraph at lines 85--85
 [][] 
  []
 
 <dogeFace.jpg, id=16, 150.5625pt x 147.55125pt>
 File: dogeFace.jpg Graphic file (type jpg)
  <use dogeFace.jpg>
-Package pdftex.def Info: dogeFace.jpg used on input line 95.
+Package pdftex.def Info: dogeFace.jpg used on input line 86.
 (pdftex.def)             Requested size: 155.55894pt x 152.4452pt.
 
-Overfull \hbox (42.63707pt too wide) in paragraph at lines 95--95
+Overfull \hbox (42.63707pt too wide) in paragraph at lines 86--86
 [][] 
  []
 
 <smolrect.jpg, id=17, 150.5625pt x 160.6pt>
 File: smolrect.jpg Graphic file (type jpg)
  <use smolrect.jpg>
-Package pdftex.def Info: smolrect.jpg used on input line 96.
+Package pdftex.def Info: smolrect.jpg used on input line 87.
 (pdftex.def)             Requested size: 142.92097pt x 152.4452pt.
 
-Overfull \hbox (29.9991pt too wide) in paragraph at lines 96--96
+Overfull \hbox (29.9991pt too wide) in paragraph at lines 87--87
 [][] 
  []
 
 <smolrect2.jpg, id=18, 150.5625pt x 200.75pt>
 File: smolrect2.jpg Graphic file (type jpg)
  <use smolrect2.jpg>
-Package pdftex.def Info: smolrect2.jpg used on input line 97.
+Package pdftex.def Info: smolrect2.jpg used on input line 88.
 (pdftex.def)             Requested size: 114.34137pt x 152.4452pt.
 
-Overfull \hbox (1.4195pt too wide) in paragraph at lines 97--97
+Overfull \hbox (1.4195pt too wide) in paragraph at lines 88--88
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
@@ -522,10 +531,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
 
 ]
+Underfull \hbox (badness 3623) in paragraph at lines 103--104
+\OT1/ptm/m/n/10.03749 cas-cade clas-si-fiers with dif-fer-ent num-bers of stage
+s,
+ []
+
+
+Underfull \hbox (badness 1603) in paragraph at lines 103--104
+\OT1/ptm/m/n/10.03749 de-feats the pur-pose of face de-tec-tion, even with the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2 <./naisubodi2.jpg> <./good3.jpg> <./terrible1.jpg> <./terrible5.jpg> <./goo
 dFace2.jpg> <./dogeFace.jpg> <./smolrect.jpg> <./smolrect2.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+ []
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 166--167
+[]\OT1/ptm/m/n/8.03 T. M. (2011, Jan 17). Cat-Dat-a-Col-lec-tion [On-line]. Ava
+il-able:
+ []
+
+
+Overfull \hbox (18.34473pt too wide) in paragraph at lines 170--171
+\OT1/ptm/m/n/8.03 http://scikit-learn.org/stable/modules/generated/sklearn.svm.
+LinearSVC.html 
+ []
+
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -537,24 +578,28 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-(./final report.aux) ) 
+[3] (./final report.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
  5091 strings out of 493089
- 79274 string characters out of 6134842
- 159658 words of memory out of 5000000
+ 79268 string characters out of 6134842
+ 157697 words of memory out of 5000000
  8501 multiletter control sequences out of 15000+600000
  48983 words of font info for 87 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 38i,12n,39p,1191b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/
-8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "final report.pdf" (3 pages, 536075 bytes).
+ 38i,12n,39p,1619b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "final report.pdf" (4 pages, 540586 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
- 22 compressed objects within 1 object stream
+ 45 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
